@@ -1,0 +1,233 @@
+/* GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #4c739b 0%, #b0d5a7 100%) fixed;
+  background: -webkit-linear-gradient(to bottom, #4c739b 0%, #b0d5a7 100%) fixed;
+  background: -moz-linear-gradient(to bottom, #4c739b 0%, #b0d5a7 100%) fixed;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  gap: 10px;
+}
+
+.header .logo {
+  width: 90px;
+  height: 90px;
+  animation: fadein 1s ease-in;
+}
+
+.header_title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.form_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_wrapper p {
+  line-height: 2;
+  font-size: 0.625rem;
+  font-style: italic;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn_search {
+  width: 55px;
+  height: 30px;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-color: #416384;
+  opacity: 0.3;
+}
+
+.btn_search:hover {
+  background-color: #527ca6b2;
+}
+
+.input__search {
+  background-color: transparent;
+  color: white;
+  padding: 6px 10px;
+  width: 300px;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  border-bottom: white solid 2px;
+  transition: 0.3s;
+}
+
+.input__search::placeholder {
+  color: white;
+}
+
+.input__search:focus {
+  font-size: 1em;
+  font-weight: bold;
+  transition: 0.3s;
+  outline: none;
+}
+
+.input__search:focus::placeholder {
+  color: transparent;
+}
+
+.hero {
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 1px -1px 3px 1px rgba(158, 158, 158, 0.092);
+  -webkit-box-shadow: 1px -1px 3px 1px rgba(158, 158, 158, 0.499);
+  -moz-box-shadow: 1px -1px 3px 1px rgba(158, 158, 158, 0.498);
+}
+
+.city_cards {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #416384; /* it sets the text color for "error text" */
+  font-weight: 700;
+}
+
+.card {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 24px;
+  background-color: #222831;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  transform: translateZ(0) perspective(1000px);
+  animation: fadein 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card_title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.card_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+  text-transform: capitalize;
+}
+
+.card_description {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: end;
+}
+
+.card_description h6 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.card_title .city_degree {
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px black;
+}
+
+.city_temprange {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5px;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* SPECIAL CLASSES */
+
+.active {
+  opacity: 1;
+}
+
+/* MEDIA Q */
+
+@media only screen and (min-width: 768px) {
+  .header_title {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  .card {
+    width: 600px;
+  }
+
+  .card_title {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header_title {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  .hero {
+    width: 60%;
+  }
+
+  .card_title {
+    font-size: 1rem;
+  }
+}

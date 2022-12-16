@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sicily Weather App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <section class="header">
+      <h1 class="header_title">Today Sicily Weather</h1>
+      <img class="logo" src="./_images/sicil-logo.svg" alt="Sicily" />
+
+      <!-- SEARCHBAR -->
+      <div class="searchbar">
+        <div class="form_wrapper">
+          <form class="form">
+            <input
+              type="search"
+              class="input__search"
+              placeholder="Enter a location.. "
+              oninvalid="this.setCustomValidity('Please add more than 3 characters')"
+              oninput="this.setCustomValidity('')"
+              pattern="[A-Za-z]{3,}"
+              required
+            />
+          </form>
+          <p>(Must have a minimum of 4 characters)</p>
+        </div>
+
+        <button type="submit" class="btn_search">Search</button>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="city_cards"></div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
